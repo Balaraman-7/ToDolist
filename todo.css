@@ -1,15 +1,16 @@
 *{
-    font-family: 'Lobster', cursive;
+  font-family: 'Lobster', cursive;
 }
 
-ul{
-    list-style-type: none;
+body{
+  background: radial-gradient(circle at center, #8B5CF6, #6366F1);
 }
 
-li:before {
-    content: "✅ ";
-    margin-right: 8px;
-    font-size: 30px;
+.title{
+  font-size: 60px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
 }
 
 ul {
@@ -29,25 +30,6 @@ li {
   border-bottom: 2px solid black;
   margin-bottom: 8px;
 }
-
-.append-text {
-  font-size: 30px;
-  text-align: center;
-  flex: 1;
-  word-break: break-word;  
-}
-
-body{
-    background: radial-gradient(circle at center, #8B5CF6, #6366F1);
-}
-
-.title{
-    font-size: 60px;
-    color: black;
-    text-align: center;
-    font-weight: bold;
-}
-
 
 .input-row {
   display: flex;
@@ -70,11 +52,24 @@ body{
   font-weight: bold;
   margin-top: 10px;
   box-shadow: 0 2px 18px rgba(0,0,0, 0.25);
+  transition: transform 0.2s;
+  margin-right: 31px;
+}
+
+.input-box:hover{
+  transform:scale(1.2);
 }
 
 .input-box::placeholder{
-    color: black;
-    font-weight: bold;
+  color: black;
+  font-weight: bold;
+}
+
+.append-text {
+  font-size: 30px;
+  text-align: center;
+  flex: 1;
+  word-break: break-word;  
 }
 
 .add-btn {
@@ -92,24 +87,57 @@ body{
   padding-left: 14px;
   padding-right: 14px;
   cursor: pointer;
-  transition: padding 0.8s;
+  transition: padding 0.2s,transform 0.2s;
 }
 
-button:active{
-    box-shadow: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 7px;
-    padding-right: 7px;
+.add-btn:hover{
+  transform:scale(1.2);
+}
+
+.add-btn:active{
+  box-shadow: none;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  padding-left: 7px;
+  padding-right: 8px;
 }
 
 .delete-btn{
-    background-color: red;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 22px;
-    padding: 5px 5px;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 5px 5px;
+  margin-bottom: 8px;
+  transition: transform 0.2s;
+}
+
+.delete-btn:hover{
+  transform: scale(1.2);
+}
+
+.check-btn{
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 8px;
+  transition: transform 0.2s;
+}
+.check-btn:hover{
+  transform: scale(1.2);
+}
+
+.check-btn:active{
+  box-shadow: none;
+  padding: 0;
+}
+
+.strikethrough{
+  text-decoration: line-through;
+  opacity: 0.6;
 }
 
 
